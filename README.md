@@ -1,0 +1,1 @@
+VSCode settings to build Godot 4 and its export templates from source on Windows and Linux (x86_64).

@@ -1,0 +1,300 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        // NOTE: "dev_build=yes" is for DEV_ENABLED, -O0, symbols, assert() in 3rd party 
+        // NOTE: "production=yes" is for static libgcc, no debug symbols, auto lto
+        // NOTE: debug symbols are enabled separately for production builds
+        //
+        // NOTE: On Windows run python misc/scripts/install_d3d12_sdk_windows.py for DX12 support
+        // NOTE: On Linux install `mold` linker package
+        //
+        // ==========================================
+        // =                Linux                   =
+        // ==========================================
+        // Linux editor (dev)
+        {
+            "label": "linux64_dev",
+            "group": "build",
+            "type": "shell",
+            "command": "scons",
+            "args": [
+                "target=editor",
+                "arch=x86_64",
+                "platform=linuxbsd",
+                "linker=mold",
+                "dev_build=yes",
+                // "custom_modules=../modules"
+            ],
+            "problemMatcher": "$gcc"
+        },
+        // Clean Linux editor (dev)
+        {
+            "label": "clean_linux64_dev",
+            "group": "build",
+            "type": "shell",
+            "command": "scons",
+            "args": [
+                "--clean",
+                "target=editor",
+                "arch=x86_64",
+                "platform=linuxbsd",
+                "linker=mold",
+                "dev_build=yes",
+                // "custom_modules=../modules"
+            ],
+            "problemMatcher": "$gcc"
+        },
+        // Linux export templates (dev)
+        {
+            "label": "linux64_export_dev",
+            "group": "build",
+            "type": "shell",
+            "command": "scons",
+            "args": [
+                "target=template_debug",
+                "arch=x86_64",
+                "platform=linuxbsd",
+                "linker=mold",
+                "dev_build=yes",
+                // "custom_modules=../modules"
+            ],
+            "problemMatcher": "$gcc"
+        },
+        // Clean Linux export templates (dev)
+        {
+            "label": "clean_linux64_export_dev",
+            "group": "build",
+            "type": "shell",
+            "command": "scons",
+            "args": [
+                "--clean",
+                "target=template_debug",
+                "arch=x86_64",
+                "platform=linuxbsd",
+                "linker=mold",
+                "dev_build=yes",
+                // "custom_modules=../modules"
+            ],
+            "problemMatcher": "$gcc"
+        },
+        // Linux editor (release)
+        {
+            "label": "linux64_release",
+            "group": "build",
+            "type": "shell",
+            "command": "scons",
+            "args": [
+                "target=editor",
+                "arch=x86_64",
+                "platform=linuxbsd",
+                "linker=mold",
+                "production=yes",
+                "debug_symbols=yes",
+                "separate_debug_symbols=yes"
+                // "custom_modules=../modules"
+            ],
+            "problemMatcher": "$gcc"
+        },
+        // Clean Linux editor (release)
+        {
+            "label": "clean_linux64_release",
+            "group": "build",
+            "type": "shell",
+            "command": "scons",
+            "args": [
+                "--clean",
+                "target=editor",
+                "arch=x86_64",
+                "platform=linuxbsd",
+                "linker=mold",
+                "production=yes",
+                "debug_symbols=yes",
+                "separate_debug_symbols=yes"
+                // "custom_modules=../modules"
+            ],
+            "problemMatcher": "$gcc"
+        },
+        // Linux export templates (release)
+        {
+            "label": "linux64_export_release",
+            "group": "build",
+            "type": "shell",
+            "command": "scons",
+            "args": [
+                "target=template_release",
+                "arch=x86_64",
+                "platform=linuxbsd",
+                "linker=mold",
+                "production=yes",
+                "debug_symbols=yes",
+                "separate_debug_symbols=yes"
+                // "custom_modules=../modules"
+            ],
+            "problemMatcher": "$gcc"
+        },
+        // Clean Linux export templates (release)
+        {
+            "label": "clean_linux64_export_release",
+            "group": "build",
+            "type": "shell",
+            "command": "scons",
+            "args": [
+                "--clean",
+                "target=template_release",
+                "arch=x86_64",
+                "platform=linuxbsd",
+                "linker=mold",
+                "production=yes",
+                "debug_symbols=yes",
+                "separate_debug_symbols=yes"
+                // "custom_modules=../modules"
+            ],
+            "problemMatcher": "$gcc"
+        },
+        // ==========================================
+        // =                Windows                 =
+        // ==========================================
+        // Windows editor (dev)
+        {
+            "label": "win64_dev",
+            "group": "build",
+            "type": "shell",
+            "command": "scons",
+            "args": [
+                "target=editor",
+                "arch=x86_64",
+                "platform=windows",
+                "dev_build=yes",
+                "separate_debug_symbols=yes",
+                // "custom_modules=../modules"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        // Clean Windows editor (dev)
+        {
+            "label": "clean_win64_dev",
+            "group": "build",
+            "type": "shell",
+            "command": "scons",
+            "args": [
+                "--clean",
+                "target=editor",
+                "arch=x86_64",
+                "platform=windows",
+                "dev_build=yes",
+                "separate_debug_symbols=yes",
+                // "custom_modules=../modules"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        // Windows export templates (dev)
+        {
+            "label": "win64_export_dev",
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "type": "shell",
+            "command": "scons",
+            "args": [
+                "target=template_debug",
+                "arch=x86_64",
+                "platform=windows",
+                "dev_build=yes",
+                "separate_debug_symbols=yes",
+                // "custom_modules=../modules"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        // Clean Windows export templates (dev)
+        {
+            "label": "win64_export_dev",
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "type": "shell",
+            "command": "scons",
+            "args": [
+                "--clean",
+                "target=template_debug",
+                "arch=x86_64",
+                "platform=windows",
+                "dev_build=yes",
+                "separate_debug_symbols=yes",
+                // "custom_modules=../modules"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        // Windows editor (release)
+        {
+            "label": "win64_release",
+            "group": "build",
+            "type": "shell",
+            "command": "scons",
+            "args": [
+                "target=editor",
+                "arch=x86_64",
+                "platform=windows",
+                "production=yes",
+                "debug_symbols=yes",
+                "separate_debug_symbols=yes",
+                // "custom_modules=../modules"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        // Clean Windows editor (release)
+        {
+            "label": "clean_win64_release",
+            "group": "build",
+            "type": "shell",
+            "command": "scons",
+            "args": [
+                "--clean",
+                "target=editor",
+                "arch=x86_64",
+                "platform=windows",
+                "production=yes",
+                "debug_symbols=yes",
+                "separate_debug_symbols=yes",
+                // "custom_modules=../modules"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        // Windows export templates (release)
+        {
+            "label": "win64_export_release",
+            "group": "build",
+            "type": "shell",
+            "command": "scons",
+            "args": [
+                "target=template_release",
+                "arch=x86_64",
+                "platform=windows",
+                "production=yes",
+                "debug_symbols=yes",
+                "separate_debug_symbols=yes",
+                // "custom_modules=../modules"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        // Clean Windows export templates (release)
+        {
+            "label": "win64_export_release",
+            "group": "build",
+            "type": "shell",
+            "command": "scons",
+            "args": [
+                "--clean",
+                "target=template_release",
+                "arch=x86_64",
+                "platform=windows",
+                "production=yes",
+                "debug_symbols=yes",
+                "separate_debug_symbols=yes",
+                // "custom_modules=../modules"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+    ]
+}

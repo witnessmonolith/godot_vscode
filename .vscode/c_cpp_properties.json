@@ -1,0 +1,44 @@
+{
+    "configurations": [
+        {
+            "name": "linux64_dev",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/platform/linuxbsd/**"
+            ],
+            "defines": [
+                "DEBUG_ENABLED",
+                "TOOLS_ENABLED",
+                "SDL_ENABLED",
+                "DEV_ENABLED"
+            ],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "linux-gcc-x64"
+        },
+        {
+            "name": "win64_dev",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/platform/windows/**"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE",
+                "WINDOWS_ENABLED",
+                "DEBUG_ENABLED",
+                "TOOLS_ENABLED",
+                "SDL_ENABLED",
+                "DEV_ENABLED"
+            ],
+            "windowsSdkVersion": "10.0.22621.0",
+            "compilerPath": "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.38.33130/bin/Hostx64/x64/cl.exe",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "windows-msvc-x64"
+        }
+    ],
+    "version": 4
+}

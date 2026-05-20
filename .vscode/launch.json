@@ -1,0 +1,105 @@
+{
+    // NOTE: Change the "args" below to edit or run a project.
+    // NOTE: "args": [ "--editor", "--path", "path-to-your-godot-project-folder" ],
+    // NOTE: To run the project instead of editing it, remove the "--editor" argument.
+    "configurations": [
+        // ==========================================
+        // =                Linux                   =
+        // ==========================================
+        // Linux editor (dev)
+        {
+            "name": "linux64_dev_editor",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/bin/godot.linuxbsd.editor.dev.x86_64",
+            "args": [
+                "--editor"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin/gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Load custom pretty-printers for Godot types.",
+                    "text": "source ${workspaceRoot}/misc/utility/godot_gdb_pretty_print.py"
+                }
+            ],
+            "preLaunchTask": "linux64_dev"
+        },
+        // Linux editor project (dev)
+        {
+            "name": "linux64_dev_project",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/bin/godot.linuxbsd.editor.dev.x86_64",
+            "args": [
+                "--editor",
+                "--path",
+                "/home/user/godot/myproject"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin/gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Load custom pretty-printers for Godot types.",
+                    "text": "source ${workspaceRoot}/misc/utility/godot_gdb_pretty_print.py"
+                }
+            ],
+            "preLaunchTask": "linux64_dev"
+        },
+        // ==========================================
+        // =                Windows                 =
+        // ==========================================
+        // Windows editor (dev)
+        {
+            "name": "win64_dev_editor",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/bin/godot.windows.editor.dev.x86_64.exe",
+            "args": [
+                "--editor"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "console": "internalConsole",
+            "visualizerFile": "${workspaceFolder}/platform/windows/godot.natvis",
+            "preLaunchTask": "win64_dev"
+        },
+        // Windows project (dev)
+        {
+            "name": "win64_dev_project",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/bin/godot.windows.editor.dev.x86_64.exe",
+            "args": [
+                "--editor",
+                "--path",
+                "d:\\godot\\myproject\\"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "console": "internalConsole",
+            "visualizerFile": "${workspaceFolder}/platform/windows/godot.natvis",
+            "preLaunchTask": "win64_dev"
+        }
+    ]
+}
