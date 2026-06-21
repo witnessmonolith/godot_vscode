@@ -8,6 +8,7 @@
         // NOTE: On Windows run python misc/scripts/install_d3d12_sdk_windows.py for DX12 support
         // NOTE: On Linux install `mold` linker package
         //
+        // NOTE: ANGLE support: https://docs.godotengine.org/en/latest/engine_details/development/compiling/compiling_for_windows.html#compiling-with-angle-support
         // ==========================================
         // =                Linux                   =
         // ==========================================
@@ -23,6 +24,7 @@
                 "platform=linuxbsd",
                 "linker=mold",
                 "dev_build=yes",
+                "accesskit=no",
                 // "custom_modules=../modules"
             ],
             "problemMatcher": "$gcc"
@@ -40,6 +42,7 @@
                 "platform=linuxbsd",
                 "linker=mold",
                 "dev_build=yes",
+                "accesskit=no",
                 // "custom_modules=../modules"
             ],
             "problemMatcher": "$gcc"
@@ -56,6 +59,7 @@
                 "platform=linuxbsd",
                 "linker=mold",
                 "dev_build=yes",
+                "accesskit=no",
                 // "custom_modules=../modules"
             ],
             "problemMatcher": "$gcc"
@@ -73,6 +77,7 @@
                 "platform=linuxbsd",
                 "linker=mold",
                 "dev_build=yes",
+                "accesskit=no",
                 // "custom_modules=../modules"
             ],
             "problemMatcher": "$gcc"
@@ -89,6 +94,7 @@
                 "platform=linuxbsd",
                 "linker=mold",
                 "production=yes",
+                "accesskit=no",
                 "debug_symbols=yes",
                 "separate_debug_symbols=yes"
                 // "custom_modules=../modules"
@@ -108,6 +114,7 @@
                 "platform=linuxbsd",
                 "linker=mold",
                 "production=yes",
+                "accesskit=no",
                 "debug_symbols=yes",
                 "separate_debug_symbols=yes"
                 // "custom_modules=../modules"
@@ -126,6 +133,7 @@
                 "platform=linuxbsd",
                 "linker=mold",
                 "production=yes",
+                "accesskit=no",
                 "debug_symbols=yes",
                 "separate_debug_symbols=yes"
                 // "custom_modules=../modules"
@@ -145,6 +153,7 @@
                 "platform=linuxbsd",
                 "linker=mold",
                 "production=yes",
+                "accesskit=no",
                 "debug_symbols=yes",
                 "separate_debug_symbols=yes"
                 // "custom_modules=../modules"
@@ -166,6 +175,8 @@
                 "platform=windows",
                 "dev_build=yes",
                 "d3d12=yes",
+                "angle=no",
+                "accesskit=no",
                 "separate_debug_symbols=yes",
                 // "custom_modules=../modules"
             ],
@@ -184,6 +195,8 @@
                 "platform=windows",
                 "dev_build=yes",
                 "d3d12=yes",
+                "angle=no",
+                "accesskit=no",
                 "separate_debug_symbols=yes",
                 // "custom_modules=../modules"
             ],
@@ -204,6 +217,8 @@
                 "platform=windows",
                 "dev_build=yes",
                 "d3d12=yes",
+                "angle=no",
+                "accesskit=no",
                 "separate_debug_symbols=yes",
                 // "custom_modules=../modules"
             ],
@@ -225,6 +240,8 @@
                 "platform=windows",
                 "dev_build=yes",
                 "d3d12=yes",
+                "angle=no",
+                "accesskit=no",
                 "separate_debug_symbols=yes",
                 // "custom_modules=../modules"
             ],
@@ -243,6 +260,8 @@
                 "production=yes",
                 "debug_symbols=yes",
                 "d3d12=yes",
+                "angle=no",
+                "accesskit=no",
                 "separate_debug_symbols=yes",
                 // "custom_modules=../modules"
             ],
@@ -262,6 +281,8 @@
                 "production=yes",
                 "debug_symbols=yes",
                 "d3d12=yes",
+                "angle=no",
+                "accesskit=no",
                 "separate_debug_symbols=yes",
                 // "custom_modules=../modules"
             ],
@@ -280,6 +301,8 @@
                 "production=yes",
                 "debug_symbols=yes",
                 "d3d12=yes",
+                "angle=no",
+                "accesskit=no",
                 "separate_debug_symbols=yes",
                 // "custom_modules=../modules"
             ],
@@ -299,6 +322,8 @@
                 "production=yes",
                 "debug_symbols=yes",
                 "d3d12=yes",
+                "angle=no",
+                "accesskit=no",
                 "separate_debug_symbols=yes",
                 // "custom_modules=../modules"
             ],
