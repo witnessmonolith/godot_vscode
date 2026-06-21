@@ -165,6 +165,7 @@
                 "arch=x86_64",
                 "platform=windows",
                 "dev_build=yes",
+                "d3d12=yes",
                 "separate_debug_symbols=yes",
                 // "custom_modules=../modules"
             ],
@@ -182,6 +183,7 @@
                 "arch=x86_64",
                 "platform=windows",
                 "dev_build=yes",
+                "d3d12=yes",
                 "separate_debug_symbols=yes",
                 // "custom_modules=../modules"
             ],
@@ -201,6 +203,7 @@
                 "arch=x86_64",
                 "platform=windows",
                 "dev_build=yes",
+                "d3d12=yes",
                 "separate_debug_symbols=yes",
                 // "custom_modules=../modules"
             ],
@@ -221,6 +224,7 @@
                 "arch=x86_64",
                 "platform=windows",
                 "dev_build=yes",
+                "d3d12=yes",
                 "separate_debug_symbols=yes",
                 // "custom_modules=../modules"
             ],
@@ -238,6 +242,7 @@
                 "platform=windows",
                 "production=yes",
                 "debug_symbols=yes",
+                "d3d12=yes",
                 "separate_debug_symbols=yes",
                 // "custom_modules=../modules"
             ],
@@ -256,6 +261,7 @@
                 "platform=windows",
                 "production=yes",
                 "debug_symbols=yes",
+                "d3d12=yes",
                 "separate_debug_symbols=yes",
                 // "custom_modules=../modules"
             ],
@@ -273,6 +279,7 @@
                 "platform=windows",
                 "production=yes",
                 "debug_symbols=yes",
+                "d3d12=yes",
                 "separate_debug_symbols=yes",
                 // "custom_modules=../modules"
             ],
@@ -291,6 +298,7 @@
                 "platform=windows",
                 "production=yes",
                 "debug_symbols=yes",
+                "d3d12=yes",
                 "separate_debug_symbols=yes",
                 // "custom_modules=../modules"
             ],
